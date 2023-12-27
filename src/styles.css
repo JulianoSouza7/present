@@ -33,15 +33,24 @@
     max-width: 40vw;
     width: 100%;
     object-fit: contain;
+    cursor: pointer
 }
+
 .div-texto{
+    padding-top: 30px;
     max-width: 100%;
-    display: flex;
+}
+
+.div-img{
+    height: 30vh;
+    width: 40vw;
 }
 
 .texto {
     text-align: center;
     font-size: 25px;
+    margin: 0 auto;
+    padding-top: 50px;
     font-family: 'Edu TAS Beginner', sans-serif;
     justify-content: center;
     max-width: 80%;
@@ -78,4 +87,36 @@
     100% {
         color: violet; /* Cor final (violeta) */
     }
+}
+
+.loader {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 100px; /* Ajuste o tamanho conforme necessário */
+    position: relative;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.loader::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ccc; /* Cor do contorno do carregamento */
+    border-top-color: #00bcd4; /* Cor do carregamento */
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spin 1s linear infinite; /* Animação de rotação */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.center{
+    margin: 0 auto;
+    justify-content: center;
 }
